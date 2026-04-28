@@ -112,3 +112,16 @@ footer {
     padding: 12px;
     margin-top: 20px;
 }
+/* PREVIEW BOX */
+#image {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    margin: 20px auto;
+    border: 3px solid #333;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    line-height: 300px;
+    font-weight: bold;
+}
