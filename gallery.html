@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Switzerland Gallery</title>
@@ -25,15 +24,18 @@
 
 <h2>Gallery</h2>
 
+<!-- 🔥 INTERACTIVE PREVIEW BOX -->
+<div id="image">Hover over an image below to display here.</div>
+
 <div class="gallery">
-    <img src="images/swiss1.jpg" alt="Swiss Alps">
-    <img src="images/swiss2.jpg" alt="Lake view">
-    <img src="images/swiss3.jpg" alt="Swiss village">
-    <img src="images/swiss4.jpg" alt="Mountain train">
-    <img src="images/swiss5.jpg" alt="Snow mountains">
-    <img src="images/swiss6.jpg" alt="City view">
-    <img src="images/swiss7.jpg" alt="Nature scenery">
-    <img src="images/swiss8.jpg" alt="Sunset view">
+    <img src="images/swiss1.jpg" alt="Swiss Alps" onmouseover="upDate(this)" onmouseout="undo()">
+    <img src="images/swiss2.jpg" alt="Lake view" onmouseover="upDate(this)" onmouseout="undo()">
+    <img src="images/swiss3.jpg" alt="Swiss village" onmouseover="upDate(this)" onmouseout="undo()">
+    <img src="images/swiss4.jpg" alt="Mountain train" onmouseover="upDate(this)" onmouseout="undo()">
+    <img src="images/swiss5.jpg" alt="Snow mountains" onmouseover="upDate(this)" onmouseout="undo()">
+    <img src="images/swiss6.jpg" alt="City view" onmouseover="upDate(this)" onmouseout="undo()">
+    <img src="images/swiss7.jpg" alt="Nature scenery" onmouseover="upDate(this)" onmouseout="undo()">
+    <img src="images/swiss8.jpg" alt="Sunset view" onmouseover="upDate(this)" onmouseout="undo()">
 </div>
 
 </main>
@@ -41,6 +43,8 @@
 <footer>
     <p>© Switzerland Travel</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
