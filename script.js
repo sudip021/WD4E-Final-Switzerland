@@ -11,3 +11,7 @@ function undo() {
     imageDiv.innerHTML = "Hover over an image below to display here.";
     imageDiv.style.backgroundImage = "url('')";
 }
+function showFact() {
+    document.getElementById("fact").innerHTML =
+        "Switzerland has over 1,500 lakes and is one of the most peaceful countries in the world.";
+}
