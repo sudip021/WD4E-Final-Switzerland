@@ -45,7 +45,8 @@ nav a {
     font-weight: bold;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     color: yellow;
 }
 
@@ -63,6 +64,7 @@ h2 {
 
 p {
     margin-bottom: 15px;
+    line-height: 1.5;
 }
 
 /* Gallery */
@@ -77,11 +79,17 @@ p {
     height: 220px;
     object-fit: cover;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .gallery img:hover {
     transform: scale(1.05);
     transition: 0.3s;
+}
+
+/* Focus visible (IMPORTANT for accessibility) */
+.gallery img:focus {
+    outline: 3px solid #d52b1e;
 }
 
 /* Preview Box */
