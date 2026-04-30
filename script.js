@@ -1,40 +1,46 @@
 function upDate(previewPic) {
-    let imageDiv = document.getElementById("image");
-
+    const imageDiv = document.getElementById("image");
     imageDiv.innerHTML = previewPic.alt;
-    imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
+    imageDiv.style.backgroundImage = `url('${previewPic.src}')`;
 }
 
 function undo() {
-    let imageDiv = document.getElementById("image");
-
+    const imageDiv = document.getElementById("image");
     imageDiv.innerHTML = "Hover or focus on an image below to display here.";
-    imageDiv.style.backgroundImage = "url('')";
+    imageDiv.style.backgroundImage = "";
 }
 
 function showFact() {
-    document.getElementById("fact").innerHTML =
-        "Switzerland has over 1,500 lakes and is one of the most peaceful countries in the world.";
+    const fact = document.getElementById("fact");
+    fact.textContent =
+        "Switzerland has over 1,500 lakes and is known for its peaceful environment.";
 }
 
-/* REQUIRED FUNCTION */
-function addTabFocus() {
-    console.log("Page loaded: tabindex applied");
+/* MAIN ACCESSIBILITY FUNCTION */
+function initGallery() {
+    console.log("Accessibility initialized");
 
-    let images = document.querySelectorAll(".gallery img");
+    const images = document.querySelectorAll(".gallery img");
 
-    for (let i = 0; i < images.length; i++) {
-        images[i].setAttribute("tabindex", "0");
+    images.forEach((img) => {
+        // Make focusable
+        img.setAttribute("tabindex", "0");
 
-        images[i].onfocus = function () {
-            upDate(this);
-        };
+        // Mouse support
+        img.addEventListener("mouseover", () => upDate(img));
+        img.addEventListener("mouseout", undo);
 
-        images[i].onblur = function () {
-            undo();
-        };
+        // Keyboard support
+        img.addEventListener("focus", () => upDate(img));
+        img.addEventListener("blur", undo);
+    });
+
+    // Button event (clean JS, no inline)
+    const btn = document.getElementById("factBtn");
+    if (btn) {
+        btn.addEventListener("click", showFact);
     }
 }
 
-/* ONLOAD EVENT */
-window.onload = addTabFocus;
+/* On Load */
+window.addEventListener("load", initGallery);
