@@ -15,7 +15,7 @@
     <h1>Explore Switzerland 🇨🇭</h1>
 </header>
 
-<nav>
+<nav aria-label="Main Navigation">
     <a href="index.html">Home</a>
     <a href="gallery.html">Gallery</a>
     <a href="about.html">About</a>
@@ -29,17 +29,17 @@
 <div id="image">Hover or focus on an image below to display here.</div>
 
 <div class="gallery">
-    <img src="images/swiss1.jpg" alt="Snow-covered Swiss Alps mountains" onmouseover="upDate(this)" onmouseout="undo()">
-    <img src="images/swiss2.jpg" alt="Clear blue lake with mountains in Switzerland" onmouseover="upDate(this)" onmouseout="undo()">
-    <img src="images/swiss3.jpg" alt="Traditional Swiss village with wooden houses" onmouseover="upDate(this)" onmouseout="undo()">
-    <img src="images/swiss4.jpg" alt="Scenic mountain train in Switzerland" onmouseover="upDate(this)" onmouseout="undo()">
-    <img src="images/swiss5.jpg" alt="Snowy mountain landscape in Switzerland during winter" onmouseover="upDate(this)" onmouseout="undo()">
-    <img src="images/swiss6.jpg" alt="Modern Swiss city skyline view" onmouseover="upDate(this)" onmouseout="undo()">
-    <img src="images/swiss7.jpg" alt="Green hills and natural scenery in Switzerland" onmouseover="upDate(this)" onmouseout="undo()">
-    <img src="images/swiss8.jpg" alt="Sunset over Swiss mountains with orange sky" onmouseover="upDate(this)" onmouseout="undo()">
+    <img src="images/swiss1.jpg" alt="Snow-covered Swiss Alps mountains">
+    <img src="images/swiss2.jpg" alt="Clear blue lake with mountains in Switzerland">
+    <img src="images/swiss3.jpg" alt="Traditional Swiss village with wooden houses">
+    <img src="images/swiss4.jpg" alt="Scenic mountain train in Switzerland">
+    <img src="images/swiss5.jpg" alt="Snowy mountain landscape during winter in Switzerland">
+    <img src="images/swiss6.jpg" alt="Modern Swiss city skyline">
+    <img src="images/swiss7.jpg" alt="Green hills and natural scenery in Switzerland">
+    <img src="images/swiss8.jpg" alt="Sunset over Swiss mountains with warm colors">
 </div>
 
-<button onclick="showFact()">Show Fun Fact</button>
+<button id="factBtn">Show Fun Fact</button>
 <p id="fact"></p>
 
 </main>
